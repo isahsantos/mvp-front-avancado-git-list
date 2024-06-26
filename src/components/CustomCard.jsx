@@ -1,4 +1,3 @@
-// src/components/CustomCard.jsx
 import React from 'react';
 import { Card, CardContent, Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
@@ -10,7 +9,7 @@ const CustomCard = styled(Card)({
   alignItems: 'center',
   padding: '16px',
   boxShadow: 'none',
-  height: '200px', // Defina a altura desejada para o card
+  height: '200px', 
 });
 
 const ImageBox = styled(Box)(({ image }) => ({

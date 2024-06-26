@@ -1,0 +1,11 @@
+section{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Montserrat';
+  }
+  h1{
+    font-family: 'Montserrat';
+  }

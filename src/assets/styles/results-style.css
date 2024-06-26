@@ -1,0 +1,64 @@
+section{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Montserrat';
+  }
+  .header{
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    color: blue;
+
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    overflow-x: auto;
+  }
+  .page-item {
+    margin: 0 5px;
+
+  }
+  
+  .page-link {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .page-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .page-link.active {
+    background: linear-gradient(45deg, #14B2F5, #5276D3);
+    color: white;
+    border: none;
+  }
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #14B2F5, #5276D3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
