@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CustomCardComponent from '../components/CustomCard';
 import anotherImage from '../assets/images/filter-banner.svg';
+import favoriteImage from '../assets/icons/favorite-folder.svg'
 import GradientButton from '../components/GradientButton';
 import GradientInput from '../components/InputGradient';
 import '../assets/styles/home-style.css';
@@ -36,6 +37,10 @@ const HomePage = () => {
     navigateTo(`/results/${inputValue}`);
   };
 
+  const handleClickCard = () => {
+    navigateTo(`/favorites`);
+  };
+  
   return (
     <>
       <Header></Header>
@@ -74,6 +79,13 @@ const HomePage = () => {
             <p></p>
           )}
         </div>
+        <CustomCardComponent
+          title="Acesse seus candidatos favoritos."
+          text="Veja os candidatos favoritados aqui.  "
+          image={favoriteImage}
+          onClick={handleClickCard}
+
+        />
       </section>
     </>
 

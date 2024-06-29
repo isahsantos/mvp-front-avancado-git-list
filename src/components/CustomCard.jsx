@@ -9,7 +9,8 @@ const CustomCard = styled(Card)({
   alignItems: 'center',
   padding: '16px',
   boxShadow: 'none',
-  height: '200px', 
+  maxHeight: '200px', 
+  cursor: 'pointer', 
 });
 
 const ImageBox = styled(Box)(({ image }) => ({
@@ -27,15 +28,15 @@ const ContentBox = styled(CardContent)({
   flex: '1 1 auto',
 });
 
-const CustomCardComponent = ({ title, text, image }) => {
+const CustomCardComponent = ({ title, text, image, onClick }) => {
   return (
-    <CustomCard>
+    <CustomCard onClick={onClick}>
       <ImageBox image={image} />
       <ContentBox>
-        <Typography  component="div" style={{ fontFamily: 'Montserrat', fontSize:'16px', color:'#777777', fontWeight:'600'}}>
+        <Typography component="div" style={{ fontFamily: 'Montserrat', fontSize:'16px', color:'#777777', fontWeight:'600'}}>
           {title}
         </Typography>
-        <Typography   style={{ fontFamily: 'Montserrat', fontSize:'12px', color:'#777777',  fontWeight:'400'}}>
+        <Typography style={{ fontFamily: 'Montserrat', fontSize:'12px', color:'#777777', fontWeight:'400'}}>
           {text}
         </Typography>
       </ContentBox>

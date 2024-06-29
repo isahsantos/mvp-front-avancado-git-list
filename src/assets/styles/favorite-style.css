@@ -9,3 +9,14 @@ section{
   h1{
     font-family: 'Montserrat';
   }
+  .card-favorite{
+    display: block;
+    border: 1px solid #acacac;
+    padding: 18px;
+    border-radius: 8px;
+
+
+  }
+  .card-favorite:hover{
+    background-color: #acacac;
+  }

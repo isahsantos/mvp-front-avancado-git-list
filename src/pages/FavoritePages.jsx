@@ -1,67 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import UploadCV from '../components/UploadCV';
-import '../assets/styles/favorite-style.css'
+import '../assets/styles/favorite-style.css';
 import { Header } from '../components/Header';
 import Breadcrumb from '../components/Breadcrumb';
 import GradientTitle from '../components/GradientTitle';
 import HomeIcon from '../assets/icons/home.svg';
 import FavoritesIcon from '../assets/icons/favorite.svg';
-import SearchResultsIcon from '../assets/icons/search.svg';
 
-const FavoritesPage =() => {
-    const [favorites, setFavorites] = useState([]);
-    
-    const paths = [
-        { name: 'Home', url: '/', icon: HomeIcon },
-        { name: 'Favoritos', url: '/results', icon: FavoritesIcon }
-      ];
-
-
-    useEffect(() => {
-      const fetchFavorites = () => {
-        const favoritesFromStorage = JSON.parse(localStorage.getItem('favorites')) || [];
-        setFavorites(favoritesFromStorage);
-      };
+const FavoritesPage = () => {
+  const [favorites, setFavorites] = useState([]);
   
-      fetchFavorites();
-    }, []);
-  
-    const openPdf = (username) => {
-      const pdfs = JSON.parse(localStorage.getItem('pdfs')) || {};
-      const pdfFileName = pdfs[username];
-      if (pdfFileName) {
-        const pdfUrl = `/pdfs/${encodeURIComponent(pdfFileName)}`;
-        window.open(pdfUrl, '_blank');
-      }
+  const paths = [
+    { name: 'Home', url: '/', icon: HomeIcon },
+    { name: 'Favoritos', url: '/favorites', icon: FavoritesIcon }
+  ];
+
+  useEffect(() => {
+    const fetchFavorites = () => {
+      const favoritesFromStorage = JSON.parse(localStorage.getItem('favorites')) || [];
+      setFavorites(favoritesFromStorage);
     };
-  
-    return (
-      <div>
-        <Header></Header>
-        <Breadcrumb paths={paths} />
-        <GradientTitle text="Candidatos favoritos"></GradientTitle>
-        {favorites.map((username) => (
-            <>
-            <section>
-            <div key={username}>
-                <span>Nome: {username} </span>
-            <UploadCV username={username} />
+
+    fetchFavorites();
+  }, []);
+  return (
+    <div>
+      <Header />
+      <Breadcrumb paths={paths} />
+      <GradientTitle text="Candidatos favoritos" />
+      {favorites.map((favorite, index) => (
+        <section key={favorite.username}>
+          <div className='card-favorite'>
+            <span>Nome: {favorite.username} </span>
             <div>
-            <p>
-              <span>Arquivo do curriculo:</span>{' '}
-              <span style={{ cursor: 'pointer', color: 'blue' }} onClick={() => openPdf(username)}>
-                {username}'s CV.pdf
-              </span>
-            </p>
+              <p>
+                <span>Quantidade de repositórios: {favorite.reposCount}</span>
+              </p>
             </div>
-          
-            <hr />
+            <div>
+              <p>
+                Url do perfil: {favorite.url}
+              </p>
+            </div>
           </div>
-            </section>
-            </>
-      
-        ))}
-      </div>
-    );
-  };
-  export default FavoritesPage;
+        </section>
+      ))}
+   
+    </div>
+  );
+};
+
+export default FavoritesPage;

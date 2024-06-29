@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ResultsPage from "./pages/ResultsPage";
 import FavoritesPage from "./pages/FavoritePages";
+import '../src/assets/styles/style-global.css';
+
 
 const App = () => {
   return (

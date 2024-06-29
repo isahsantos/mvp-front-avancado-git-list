@@ -4,8 +4,9 @@
     padding: 20px;
     margin: 10px 0;
     border: 1px solid #b9b7b7;
-    color: #333;
+    color: #707070;
     font-family: 'Montserrat';
+    word-break: break-all;
   }
   
   .repo-card h3 {

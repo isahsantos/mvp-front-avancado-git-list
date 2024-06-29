@@ -1,0 +1,15 @@
+a{
+    color: #4408EB;
+}
+.custom-toast {
+    font-family: 'Montserrat';
+
+  }
+  
+  .custom-toast-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .swal2-icon-show{
+    border: none;
+  }
