@@ -1,3 +1,4 @@
+import { Height } from '@mui/icons-material';
 import React from 'react';
 
 const GradientButton = ({ onClick, text }) => {
@@ -10,6 +11,9 @@ const GradientButton = ({ onClick, text }) => {
     cursor: 'pointer',
     fontSize: '16px',
     transition: 'background 0.3s',
+    fontFamily:  'Montserrat',
+    Height: '42px'
+
   };
 
   return (

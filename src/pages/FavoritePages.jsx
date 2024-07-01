@@ -23,29 +23,33 @@ const FavoritesPage = () => {
 
     fetchFavorites();
   }, []);
+
   return (
     <div>
       <Header />
       <Breadcrumb paths={paths} />
       <GradientTitle text="Candidatos favoritos" />
-      {favorites.map((favorite, index) => (
-        <section key={favorite.username}>
-          <div className='card-favorite'>
-            <span>Nome: {favorite.username} </span>
-            <div>
-              <p>
-                <span>Quantidade de repositórios: {favorite.reposCount}</span>
-              </p>
+      {favorites.length === 0 ? (
+        <p>Nenhum favorito adicionado ainda.</p>
+      ) : (
+        favorites.map((favorite) => (
+          <section key={favorite.username}>
+            <div className='card-favorite'>
+              <span>Nome: {favorite.username}</span>
+              <div>
+                <p>
+                  <span>Quantidade de repositórios: {favorite.reposCount}</span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Url do perfil: <a href={favorite.url} target="_blank" rel="noopener noreferrer">{favorite.url}</a>
+                </p>
+              </div>
             </div>
-            <div>
-              <p>
-                Url do perfil: {favorite.url}
-              </p>
-            </div>
-          </div>
-        </section>
-      ))}
-   
+          </section>
+        ))
+      )}
     </div>
   );
 };

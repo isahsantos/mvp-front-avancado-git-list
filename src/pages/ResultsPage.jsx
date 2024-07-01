@@ -13,7 +13,6 @@ import Toast from '../components/Toast';
 import checkIcon from '../assets/icons/check.svg';
 import warning from '../assets/icons/warning.svg';
 
-
 const ResultsPage = () => {
   const { username } = useParams();
   const [repos, setRepos] = useState([]);
@@ -23,6 +22,7 @@ const ResultsPage = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastIcon, setToastIcon] = useState('');
+
   const paths = [
     { name: 'Home', url: '/', icon: HomeIcon },
     { name: 'Resultado de busca', url: '/results', icon: SearchResultsIcon },
@@ -47,8 +47,15 @@ const ResultsPage = () => {
 
   const handleFavorite = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    if (!favorites.includes(username)) {
-      favorites.push(username);
+    const favoriteData = {
+      username,
+      reposCount: repos.length,
+      url: `https://github.com/${username}`
+    };
+    const isAlreadyFavorite = favorites.some(fav => fav.username === username);
+
+    if (!isAlreadyFavorite) {
+      favorites.push(favoriteData);
       localStorage.setItem('favorites', JSON.stringify(favorites));
       openToastFavorite();
     } else {
