@@ -18,6 +18,10 @@ Este é um projeto em React que permite buscar usuários do GitHub, exibir os re
 - 💅 Styled-components
 - 💾 Local Storage
 
+## 🚀 Site Projeto
+
+https://gitlisttechrecruiter.netlify.app/
+
 ## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos
