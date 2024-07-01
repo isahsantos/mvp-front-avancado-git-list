@@ -55,5 +55,6 @@ https://www.figma.com/design/bOoiw0yxBe355zVhHBasmS/MVP---Puc-Rio---repositorios
 
 
 ### 📬 Contato 
-GitHub: isahsantos
-Email: isa2014mgspn@gmail.com
+- GitHub: isahsantos
+- Email: isa2014mgspn@gmail.com
+- Linkedin: https://www.linkedin.com/in/isabela-santos-si/
