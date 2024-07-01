@@ -1,8 +1,8 @@
-# GitHub List  ![GitHub Icon](https://image.flaticon.com/icons/png/512/25/25231.png)
+# GitHub List 
 
 Este é um projeto em React que permite buscar usuários do GitHub, exibir os resultados em cards e salvar os usuários como favoritos.
 
-![Demo GIF](.\assets\images\Macbook-Air-localhost-yurvSzPAa8.gif)
+![Demo GIF](https://github.com/isahsantos/mvp-front-avancado-git-list/blob/main/src/assets/images/Macbook-Air-localhost-yurvSzPAa8.gif)
 
 
 ## 🌟 Funcionalidades
