@@ -58,6 +58,14 @@ https://www.figma.com/design/bOoiw0yxBe355zVhHBasmS/MVP---Puc-Rio---repositorios
     yarn run dev
 
 
+### 🛠️ Próximos passos
+
+- Adicionar informações  detalhadas dos candidatos, como as métricas e estatisticas do github
+- Na página de favoritos, acrescentar um campo para fazer o upload de um curriculo em pdf 
+- Na página de favoritos, associar o candidato ao um link de Linkedin
+- Acrescentar funções de compartilhamento do perfil do candidato
+- Salvar as informações do candidato em uma base de dados no local de utilizar um local storage 
+
 ### 📬 Contato 
 - GitHub: isahsantos
 - Email: isa2014mgspn@gmail.com
